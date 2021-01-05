@@ -1,0 +1,50 @@
+import pandas as pd
+import os
+
+
+arquivos_path = "/home/marcos/Python/pesquisa/arquivos/novos/sul-fronteira.csv"
+
+# municipios = os.scandir(arquivos_path)
+# for cidade in municipios:
+#    arquivos = os.scandir(cidade.path)
+#    for arquivo in arquivos:
+x = open(arquivos_path, "r")
+y = x.read()
+y = y.replace("/", ";")
+# y = y.replace("PRECIPITACÃO TOTAL. HORARIO(mm)",
+#               "PRECIPITACÃO TOTAL. HORARIO (mm)")
+# y = y.replace("Ç", "C")
+# y = y.replace("Hora UTC", "HORA (UTC)")
+# y = y.replace("-9999", "")
+# y = y.replace("-", "/")
+# y = y.replace("REGI�O:", "REGIAO")
+# y = y.replace("PRECIPITAÇÃO", "PRECIPITACAO")
+# y = y.replace("PRESSÃO", "PRESSAO")
+# y = y.replace("°C", "C")
+# y = y.replace("MÍNIMA", "MINIMA")
+# y = y.replace("DIREÇÃO", "DIRECAO")
+# y = y.replace("°", "grau")
+# y = y.replace("PRECIPITAAÄO", "PRECIPITACAO")
+# y = y.replace("PRECIPITAAÂAÂO", "PRECIPITACAO")
+# y = y.replace("FUNDAAÂAÂO", "FUNDACAO")
+# y = y.replace("FUNDA��O", "FUNDACAO")
+# y = y.replace("DIREAÄO", "DIRECAO")
+# y = y.replace("Ë", "2")
+# y = y.replace("PRESSÄO", "PRESSAO")
+# y = y.replace("ESTAAÄO", "ESTACAO")
+# y = y.replace("HORAÂRIO ", "HORARIO")
+# y = y.replace(",", ".")
+# y = y.replace("ESTAAÂAÂO", "ESTACAO")
+# y = y.replace('REGIAÂO', "REGIAO")
+# y = y.replace("DIREAÂAÂO", "DIRECAO")
+# y = y.replace("Ă", "A")
+# y = y.replace("PRESSAÂO", "PRESSAO")
+# y = y.replace("MAÂXIMA", "MAXIMA")
+# y = y.replace("MÁXIMA", "MAXIMA")
+# y = y.replace("HORÁRIO", "HORARIO")
+# y = y.replace("mAÂ", "m2")
+# y = y.replace("˛", "2")
+# y = y.replace("Data", "DATA (YYYY/MM/DD)")
+x = open(arquivos_path, "w")
+x.write(y)
+x.close()
